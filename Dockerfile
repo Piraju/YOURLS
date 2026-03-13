@@ -1,14 +1,17 @@
 FROM php:8.2-apache
 
-RUN apt-get update && apt-get install -y \
-    && rm -rf /var/lib/apt/lists/*
-
-RUN a2dismod mpm_event || true \
-    && a2dismod mpm_worker || true \
-    && a2enmod mpm_prefork \
-    && a2enmod rewrite
-
 RUN docker-php-ext-install mysqli pdo pdo_mysql
+
+RUN rm -f /etc/apache2/mods-enabled/mpm_event.conf \
+          /etc/apache2/mods-enabled/mpm_event.load \
+          /etc/apache2/mods-enabled/mpm_worker.conf \
+          /etc/apache2/mods-enabled/mpm_worker.load \
+    && ln -sf /etc/apache2/mods-available/mpm_prefork.conf \
+              /etc/apache2/mods-enabled/mpm_prefork.conf \
+    && ln -sf /etc/apache2/mods-available/mpm_prefork.load \
+              /etc/apache2/mods-enabled/mpm_prefork.load
+
+RUN a2enmod rewrite
 
 COPY . /var/www/html/
 
