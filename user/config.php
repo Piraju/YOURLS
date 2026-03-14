@@ -1,3 +1,4 @@
+<?php
 define( 'YOURLS_DB_USER',   getenv('DB_USER') );
 define( 'YOURLS_DB_PASS',   getenv('DB_PASSWORD') );
 define( 'YOURLS_DB_NAME',   getenv('DB_NAME') );
