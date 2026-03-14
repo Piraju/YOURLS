@@ -11,18 +11,18 @@
  */
 
 /** MySQL database username */
-define( 'YOURLS_DB_USER', getenv('root') );
+define( 'YOURLS_DB_USER', getenv('DB_USER') );
 
 /** MySQL database password */
-define( 'YOURLS_DB_PASS', getenv('VnosplElcNjSBGyJCkKvhktdYAfLQlaV') );
+define( 'YOURLS_DB_PASS', getenv('DB_PASSWORD') );
 
 /** The name of the database for YOURLS
  ** Use lower case letters [a-z], digits [0-9] and underscores [_] only */
-define( 'YOURLS_DB_NAME', getenv('railway') );
+define( 'YOURLS_DB_NAME', getenv('DB_NAME') );
 
 /** MySQL hostname.
  ** If using a non standard port, specify it like 'hostname:port', e.g. 'localhost:9999' or '127.0.0.1:666' */
-define( 'YOURLS_DB_HOST', getenv('mysql.railway.internal') );
+define( 'YOURLS_DB_HOST', getenv('DB_HOST') );
 
 /** MySQL tables prefix
  ** YOURLS will create tables using this prefix (eg `yourls_url`, `yourls_options`, ...)
