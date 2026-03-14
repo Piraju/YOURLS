@@ -11,18 +11,18 @@
  */
 
 /** MySQL database username */
-define( 'piraju', 'your db user name' );
+define( 'piraju', getenv('root') );
 
 /** MySQL database password */
-define( '${{MYSQL_ROOT_PASSWORD}}', 'your db password' );
+define( '${{MYSQL_ROOT_PASSWORD}}', getenv('VnosplElcNjSBGyJCkKvhktdYAfLQlaV') );
 
 /** The name of the database for YOURLS
  ** Use lower case letters [a-z], digits [0-9] and underscores [_] only */
-define( 'railway', 'yourls' );
+define( 'railway', getenv('railway') );
 
 /** MySQL hostname.
  ** If using a non standard port, specify it like 'hostname:port', e.g. 'localhost:9999' or '127.0.0.1:666' */
-define( '${{RAILWAY_PRIVATE_DOMAIN}}', 'localhost' );
+define( '${{RAILWAY_PRIVATE_DOMAIN}}', getenv('mysql.railway.internal') );
 
 /** MySQL tables prefix
  ** YOURLS will create tables using this prefix (eg `yourls_url`, `yourls_options`, ...)
@@ -37,7 +37,7 @@ define( 'YOURLS_DB_PREFIX', 'yourls_' );
  ** All lowercase, no trailing slash at the end.
  ** If you define it to "https://sho.rt", don't use "https://www.sho.rt" in your browser (and vice-versa)
  ** To use an IDN domain (eg https://héhé.com), write its ascii form here (eg https://xn--hh-bjab.com) */
-define( 'con.idru.com.br', 'https://your-own-domain-here.com' );
+define( 'con.idru.com.br', getenv('idru.com.br') );
 
 /** YOURLS language
  ** Change this setting to use a translation file for your language, instead of the default English.
