@@ -12,7 +12,7 @@ define( 'YOURLS_PRIVATE',   true );
 define( 'YOURLS_COOKIEKEY', getenv('YOURLS_COOKIEKEY') );
 
 $yourls_user_passwords = [
-    getenv('ADMIN_USER') => getenv('ADMIN_PASS'),
+    getenv('renato1') => getenv('minesurl123'),
 ];
 
 define( 'YOURLS_URL_CONVERT', 36 );
