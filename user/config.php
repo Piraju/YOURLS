@@ -8,7 +8,7 @@ define( 'YOURLS_DB_PREFIX', 'yourls_' );
 define( 'YOURLS_SITE',      getenv('YOURLS_SITE') );
 define( 'YOURLS_LANG',      '' );
 define( 'YOURLS_UNIQUE_URLS', true );
-define( 'YOURLS_PRIVATE',   true );
+define( 'YOURLS_PRIVATE',   false );
 define( 'YOURLS_COOKIEKEY', getenv('YOURLS_COOKIEKEY') );
 
 $yourls_user_passwords = [
